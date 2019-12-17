@@ -15,3 +15,6 @@ x = 5
 y = 6
 
 print(func(x, y))
+print(func(a, b))
+print(func(x, a))
+print(func(y, b))
