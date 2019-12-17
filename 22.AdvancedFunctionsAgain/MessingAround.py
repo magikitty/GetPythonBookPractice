@@ -27,3 +27,14 @@ func_3()
 
 # a = 4
 # not_working() 
+
+# A function containing a definition and call for another function (nested function)
+def sing():
+    def stop(line):
+        print("STOP!", line)
+    stop("it's hammer time!")
+    stop("in the name of love!")
+    stop("hey, what's that sound?")
+
+sing()
+# stop()   # call gives ERROR because function is not defined in global scope - cannot access without sing()
