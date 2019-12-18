@@ -6,6 +6,7 @@ The following is practice for passing a function object as a paramter to another
 Based on Listing 22.8
 """
 
+# Practice 1
 def pasta(kind_of_pasta):       # kind_of_pasta is a parameter for pasta()
     print("-*-*-*-*-*-*-*-")
     print(kind_of_pasta())      # The paranthesis for kind_of_pasta() indicate that it is a function call
@@ -20,3 +21,14 @@ def napoletana():
     return napoletana_meal
 
 pasta(carbonara)
+
+# Practice 2
+def make_statement(statement):
+    print("I'm just a little...", statement())
+    # print(statement())
+
+def user_input():
+    adjective = input("Enter an adjective: ")
+    return str(adjective)
+
+make_statement(user_input)
