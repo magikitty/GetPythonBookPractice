@@ -13,7 +13,7 @@ def grumpy_cat():
         print("No having fun. No", n, "times...")
         def no_m_times(m):
             print("...and no", m, "more times.")
-            for i in range(n+m):
+            for _ in range(n+m):
                 print("No!")
         return no_m_times
     return no_n_times
