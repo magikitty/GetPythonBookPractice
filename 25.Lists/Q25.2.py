@@ -1,8 +1,9 @@
 """
 This is Lesson 25: Working with lists
 Get Programming: Learn to Code With Python
+
+The function in this question returns all the unique items in a list (ie. there are no duplicates returned)
 """
-# L = "some", "stuff", "wow"
 
 
 def unique(L):
