@@ -1,48 +1,28 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sat May 25 09:49:50 2019
-
-@author: elina
+This is Lesson 21: Achieving modularity and abstaction with functions in
+Get Programming: Learn to Code With Python
 """
 
-print("Quick Check 21.6")
-
+# Quick Check 21.6
 
 def guessed_card(number, suit, bet):
     money_won = 0
     guessed = False
-    if number == 8 and suit == "hearts":
-        money_won = 10 * bet
+    if number == 7 and suit == "hearts":
+        money_won = 10*bet
         guessed = True
     else:
-        money_won = bet / 10
-    return(money_won, guessed)
+        money_won = bet/10
+    return("You won " + str(money_won), "Your guess was " + str(guessed))    # returns amount of money_won and if guess was True or False
 
+print(guessed_card(7, "hearts", 15))
 
-print(guessed_card(8, "hearts", 10))
+print(guessed_card("7", "hearts", 15))
 
-(amount, did_win) = guessed_card("eight", "hearts", 80)
-print(did_win)
-print(amount)
+print(guessed_card(9, "spades", 100))
 
+(guessed_card(9, "spades", 100))   # doesn't print anything because the function does not print anything
 
-def TimesTwo(number):
-    return number * 2
-
-# =============================================================================
-# def GreetUser(name):
-#     """Prints a greeting to the user"""
-#     print("Hello " + name)
-# 
-# 
-# def CountLetters(word):
-#     print(len(word))
-# 
-# 
-# GreetUser("Dave")
-# 
-# =============================================================================
-
-
-ans = TimesTwo(3)
-print(ans)
+(first_return, second_return) = guessed_card("eight", "hearts", 80)
+print(first_return)
+print(second_return)

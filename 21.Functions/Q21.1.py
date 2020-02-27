@@ -1,21 +1,20 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sun Jun 30 17:54:40 2019
-
-@author: elina
+This is Lesson 21: Achieving modularity and abstaction with functions in
+Get Programming: Learn to Code With Python
 """
 
-print("Q1. Calculating tip")
-
-
+# Q1
 def calculate_total(price, percent):
-    total = float(price + percent * price)
+    total = float(price) + int(percent) / float(price)
     return total
 
+print(calculate_total(100, 25))
 
-print("Q2. Call previous function")
+# Q2
+print(calculate_total(20, 15))
 
-
-def new_total():
-    calculate_total(20, 0.15)
-    print(calculate_total)
+# Q3
+my_price = 78.55
+my_tip = 20
+new_total = calculate_total(my_price, my_tip)
+print("Your new total is " + str(new_total))
